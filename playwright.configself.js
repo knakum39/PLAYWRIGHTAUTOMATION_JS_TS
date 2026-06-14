@@ -17,8 +17,8 @@ export default defineConfig({
   expect: {
     timeout: 40 * 1000, //timeout for assertion
   },
-
   reporter: 'html',
+  
   use: {
     browserName: 'firefox',
     // browserName: 'webkit'

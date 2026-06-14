@@ -11,7 +11,13 @@ test('Playwright special locators', async ({page})=> {
     await page.getByRole("link",{name : "Shop"}).click();
     await page.locator("app-card").filter({hasText: 'Nokia Edge'}).getByRole("button").click();
 
-    await page.pause();
+    //Debugging -> codegen tool(use below command)
+    //npx playwright test getbylocators.spec.js --headed --debug
+    //await page.pause();
+
+    //Codegen is one of the keyword to launch playwright inspector in record and playback mode.
+    //Everything happens with the Playwright inspector.
+    //npx playwright codegen URL of your website.
     
 
 
