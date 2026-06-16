@@ -3,7 +3,9 @@ const {test,expect, browser} = require('@playwright/test');
 
 test('E2E add to card flow', async ({browser,})=>{
 
-   const uemail = "anshika@gmail.com";
+   //const uemail = "anshika@gmail.com";
+   const uemail = "vani39@yopmail.com";
+   const uPassword = "Login12*"
    const productName = "ZARA COAT 3";   
 
    const context = await browser.newContext();
@@ -13,7 +15,7 @@ test('E2E add to card flow', async ({browser,})=>{
    await page.goto("https://rahulshettyacademy.com/client");
 
    await page.getByPlaceholder("email@example.com").fill(uemail);
-   await page.getByPlaceholder("enter your passsword").fill("Iamking@000");
+   await page.getByPlaceholder("enter your passsword").fill(uPassword);
    await page.getByRole('button', {name : "Login"}).click();
 
    await page.waitForLoadState("networkidle")
